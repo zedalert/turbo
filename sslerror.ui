@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SSLError</class>
+ <widget class="QDialog" name="SSLError">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>99</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>391</width>
+    <height>99</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>391</width>
+    <height>99</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Ошибка SSL подключения</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#SSLError {
+	background-color: white;
+}
+QPushButton {
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-radius: 4px;
+}
+QPushButton:hover {
+	background-color: #94d400;
+}
+QPushButton:pressed {
+	background-color: black;
+	color: white;
+}
+#ignore_b, #cancel_b {
+	background-color: #94d400;
+	border-radius: 4px;
+}</string>
+  </property>
+  <widget class="QPushButton" name="ignore">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>62</y>
+     <width>91</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>Игнорировать</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>62</y>
+     <width>91</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>Отменить</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="log">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>391</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QFrame" name="ignore_b">
+   <property name="geometry">
+    <rect>
+     <x>101</x>
+     <y>63</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="cancel_b">
+   <property name="geometry">
+    <rect>
+     <x>201</x>
+     <y>63</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>ignore_b</zorder>
+  <zorder>cancel_b</zorder>
+  <zorder>ignore</zorder>
+  <zorder>cancel</zorder>
+  <zorder>log</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

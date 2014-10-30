@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Turbo</class>
+ <widget class="QMainWindow" name="Turbo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>396</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>396</width>
+    <height>396</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>396</width>
+    <height>396</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Турбокнопка</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">#centralWidget {
+	background: white url(:/img/background.png) no-repeat;
+}
+#turbo_0, #turbo_1, #turbo_2, #turbo_3 {
+	background-color: rgba(0,0,0,0);
+	border: none;
+}
+#turbo_0:hover, #turbo_1:hover, #turbo_2:hover, #turbo_3:hover {
+	background-color: #94d400;
+	border-radius: 5px;
+}
+#turbo_0:pressed, #turbo_1:pressed, #turbo_2:pressed, #turbo_3:pressed {
+	background-color: black;
+	color: white;
+}
+#settings, #cabinet, #update {
+	border: none;
+	text-decoration: none;
+}
+#settings:hover, #cabinet:hover, #update:hover {
+	margin-top: 2px;
+	font-weight: bold;
+	border-bottom: 2px solid black;
+}
+#basement {
+	background-color: #94d400;
+}
+#turbo_0b, #turbo_1b, #turbo_2b, #turbo_3b {
+	background-color: #94d400;
+	border: none;
+	border-radius: 5px;
+}
+#contract_2 {
+	background-color: white;
+	border: none;
+}
+#menu {
+	background-color: #94d400;
+	border: none;
+}
+#black_1, #black_2 {
+	background-color: black;
+}</string>
+   </property>
+   <widget class="HoverButton" name="turbo_0">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>297</x>
+      <y>186</y>
+      <width>106</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>1 час</string>
+    </property>
+   </widget>
+   <widget class="HoverButton" name="turbo_3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>297</x>
+      <y>312</y>
+      <width>106</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>24 часа</string>
+    </property>
+   </widget>
+   <widget class="HoverButton" name="turbo_2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>297</x>
+      <y>270</y>
+      <width>106</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>6 часов</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="basement">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>361</y>
+      <width>396</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="points">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>287</y>
+      <width>271</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="balance">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>247</y>
+      <width>271</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lock">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>267</y>
+      <width>271</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="account">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>223</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="turbo_3b">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>314</y>
+      <width>102</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="turbo_2b">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>272</y>
+      <width>102</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="turbo_0b">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>188</y>
+      <width>102</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tier">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>321</y>
+      <width>271</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="settings">
+    <property name="geometry">
+     <rect>
+      <x>117</x>
+      <y>154</y>
+      <width>81</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string> Настройки </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="contract">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>205</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="contract_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>205</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="contract_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>205</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="cabinet">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>154</y>
+      <width>116</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string> Личный кабинет </string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>158</y>
+      <width>280</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="update">
+    <property name="geometry">
+     <rect>
+      <x>199</x>
+      <y>154</y>
+      <width>81</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>Обновить </string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="black_1">
+    <property name="geometry">
+     <rect>
+      <x>115</x>
+      <y>161</y>
+      <width>2</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="black_2">
+    <property name="geometry">
+     <rect>
+      <x>197</x>
+      <y>161</y>
+      <width>2</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="turbo_1b">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>230</y>
+      <width>102</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="HoverButton" name="turbo_1">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>297</x>
+      <y>228</y>
+      <width>106</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>3 часа</string>
+    </property>
+   </widget>
+   <zorder>menu</zorder>
+   <zorder>turbo_0b</zorder>
+   <zorder>turbo_2b</zorder>
+   <zorder>turbo_3b</zorder>
+   <zorder>turbo_0</zorder>
+   <zorder>turbo_3</zorder>
+   <zorder>turbo_2</zorder>
+   <zorder>basement</zorder>
+   <zorder>points</zorder>
+   <zorder>balance</zorder>
+   <zorder>lock</zorder>
+   <zorder>account</zorder>
+   <zorder>tier</zorder>
+   <zorder>settings</zorder>
+   <zorder>contract</zorder>
+   <zorder>contract_2</zorder>
+   <zorder>contract_1</zorder>
+   <zorder>cabinet</zorder>
+   <zorder>update</zorder>
+   <zorder>black_1</zorder>
+   <zorder>black_2</zorder>
+   <zorder>turbo_1b</zorder>
+   <zorder>turbo_1</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>HoverButton</class>
+   <extends>QPushButton</extends>
+   <header>HoverButton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

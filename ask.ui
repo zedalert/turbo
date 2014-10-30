@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Ask</class>
+ <widget class="QDialog" name="Ask">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>99</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>391</width>
+    <height>99</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>391</width>
+    <height>99</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Подтверждение покупки</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Ask {
+	background-color: white;
+}
+QPushButton {
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-radius: 4px;
+}
+QPushButton:hover {
+	background-color: #94d400;
+}
+QPushButton:pressed {
+	background-color: black;
+	color: white;
+}
+#yes_b, #no_b, #dontask_b {
+	background-color: #94d400;
+	border-radius: 4px;
+}</string>
+  </property>
+  <widget class="QLabel" name="txt">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>391</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="yes">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>62</y>
+     <width>81</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>Да</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="no">
+   <property name="geometry">
+    <rect>
+     <x>95</x>
+     <y>62</y>
+     <width>81</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>Нет</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dontask">
+   <property name="geometry">
+    <rect>
+     <x>181</x>
+     <y>62</y>
+     <width>201</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>Больше не спрашивать</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="yes_b">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>63</y>
+     <width>75</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="no_b">
+   <property name="geometry">
+    <rect>
+     <x>98</x>
+     <y>63</y>
+     <width>75</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="dontask_b">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>63</y>
+     <width>195</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>dontask_b</zorder>
+  <zorder>no_b</zorder>
+  <zorder>yes_b</zorder>
+  <zorder>txt</zorder>
+  <zorder>yes</zorder>
+  <zorder>no</zorder>
+  <zorder>dontask</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
