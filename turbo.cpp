@@ -508,9 +508,10 @@ void Turbo::turboTime()
 {
     QDateTime now = QDateTime::currentDateTime();
     int secondsLeft = now.secsTo(turboEndDateTime);
-    QString time = QTime().addSecs(secondsLeft).toString("HH-mm").replace("-", secondsLeft % 2 ? ":" : "<span style=\"color: #94d400;\">:</span>");
-    ui->basement->setText("Услуга активна, осталось времени:" + span.arg(time));
+    QString time = QTime().addSecs(secondsLeft).toString("HH:mm");
     tray->setToolTip("Турбокнопка включена\nОсталось времени: " + time);
+    ui->basement->setText("Услуга активна, осталось времени: " +
+                          span.arg(time.replace(":", secondsLeft % 2 ? ":" : "<span style=\"color: #94d400;\">:</span>")));
 
     if (!turboEndTimer->isActive() && tray->isVisible())
         tray->showMessage("Услуга активирована", QString("Cрок действия услуги: %1 час%2")
