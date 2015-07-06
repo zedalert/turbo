@@ -304,10 +304,10 @@ void Turbo::parseCabinetData(QString json)
     float points = map["points"].toFloat();
     float balance = map["balance"].toFloat();
 
-    ui->account->setText("Лицевой счет №: <b>" + map["account"] + "</b>");
+    ui->account->setText("Лицевой счёт №: <b>" + map["account"] + "</b>");
     ui->balance->setText("Баланс: " + span.arg(QString::number(balance)) + " руб.");
-    ui->lock->setText("Количество дней до блокировки: " + span.arg(map["lock"]));
-    ui->points->setText("Бонусный счет: " + span.arg(QString::number(points)) + " баллов");
+    ui->points->setText("Бонусный счёт: " + span.arg(QString::number(points)) + " баллов");
+    ui->lock->setText("Дней до блокировки: " + span.arg(map["lock"]));
     ui->tier->setText("Статус: <b>" + map["tier"] + "</b>");
 
     if (contracts.count() == 0)
@@ -587,11 +587,11 @@ void Turbo::turboHovered()
 {
     int i = QString(sender()->objectName()[6]).toInt();
     int hour = hours.at(i);
-    int gb = 95 * 3600 * hour / 8000; // да, объём измеряется в СИ, а не в бинарной системе, как в Windows
+    int gb = 100 * 3600 * hour / 8000; // да, объём измеряется в СИ, а не в бинарной системе, как в Windows
 
     if (uiTurboButtons.at(i)->isEnabled())
         ui->basement->setText(
-            QString("За это время можно скачать примерно %1 ГБ данных.\nСтоимость услуги - %2 %3.")
+            QString("За это время можно скачать максимум %1 ГБ данных.\nСтоимость услуги - %2 %3.")
                 .arg(gb)
                 .arg(price[i])
                 .arg(bonusFirst && bonus >= price[i] ? "бонусных баллов" : "рублей")
